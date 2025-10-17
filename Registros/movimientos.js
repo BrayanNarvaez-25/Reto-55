@@ -20,8 +20,12 @@ const filtrarMovimientos = (numeroCuenta) => {
         }
     }
 
-    console.log(movimientosCuenta)
-    //mostrarMovimientos(movimientosCuenta);
+    for(let i=0; i<movimientosCuenta.length; i++){
+        if(movimientosCuenta[i].tipo == "D"){
+            movimientosCuenta[i].monto *=-1;
+        }
+    }
+    mostrarMovimientos(movimientosCuenta);
 }
 
 
