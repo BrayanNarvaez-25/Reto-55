@@ -3,8 +3,7 @@
 
 <head>
     <link href="banco.css" rel="stylesheet" />
-    <script src="cuentas.js"></script>
-    <script src="integracion.js"></script>
+    <script src="movimientos.js"></script>
     <script src="utilitarios.js"></script>
 </head>
 
@@ -16,7 +15,7 @@
             </div>
             <div class="contenedorBotones">
                 <input type="button" value="CUENTAS" class="boton" />
-                <input type="button" value="TRANSACCIONES" class="boton" onclicK="" />
+                <input type="button" value="TRANSACCIONES" class="boton" />
                 <input type="button" value="MOVIMIENTOS" class="boton" />
             </div>
             <div class="contenedorInfoGrupo">
@@ -29,45 +28,30 @@
             <div class="superior">
                 <div class="titulo">CUENTAS</div>
                 <div class="contenedorTexto">
-                    <div class="etiquetaTexto">CEDULA</div>
+                    <div class="etiquetaTexto">CAMPO 1</div>
                     <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtCedula" autofocus />
+                        <input type="text" class="caja" />
                     </div>
                 </div>
                 <div class="contenedorTexto">
-                    <div class="etiquetaTexto">NOMBRE</div>
+                    <div class="etiquetaTexto">CAMPO 2</div>
                     <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtNombre"/>
+                        <input type="text" class="caja" />
                     </div>
                 </div>
                 <div class="contenedorTexto">
-                    <div class="etiquetaTexto">APELLIDO</div>
+                    <div class="etiquetaTexto">CAMPO 3</div>
                     <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtApellido" />
-                    </div>
-                </div>
-                  <div class="contenedorTexto">
-                    <div class="etiquetaTexto">NUMERO DE CUENTA</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtNumeroCuenta"/>
-                    </div>
-                </div>
-                 </div>
-                  <div class="contenedorTexto">
-                    <div class="etiquetaTexto">SALDO</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtSaldo"/>
+                        <input type="text" class="caja" />
                     </div>
                 </div>
                 <div class="contenedorAcciones">
-                    <input type="button" value="GUARDAR" onclick="guardaCambios();"/>
+                    <input type="button" value="GUARDAR" />
                 </div>
             </div>
 
             <div class="inferior">
                 TABLA
-            </div>
-            <div id="tablaCuentas"="areaTabla">
             </div>
 
         </div>
@@ -92,23 +76,23 @@
                 <div class="contenedorAcciones">
                     <input type="button" value="DEPOSITAR" />
                     <input type="button" value="RETIRAR" />
-
+                    
                 </div>
-
+              
             </div>
         </div>
         <div class="contenido" id="divMovimientos">
-
+          
             <div class="inferior">
                 <div class="titulo">MOVIMIENTOS</div>
                 <div class="contenedorTexto">
-                    <div class="etiquetaTexto">CAMPO 1</div>
+                    <div class="etiquetaTexto">NUMERO DE CUENTA</div>
                     <div class="cajaTexto">
-                        <input type="text" class="caja" />
+                        <input type="text" class="caja" id="txtNumCuenta3"/>
                     </div>
                 </div>
                 <div class="contenedorAcciones">
-                    <input type="button" value="BUSCAR" />
+                    <input type="button" value="VER MOVIMIENTOS" onclick="ejecutarMovimientos();"/>                    
                 </div>
                 <div id="tablaMovimientos">
                     TABLA
